@@ -6,18 +6,11 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 
 Find the largest palindrome made from the product of two 3-digit numbers.
 '''
-    
-i = 0
-number = 1
+
 palindrome = []
 
-while i < 3:
-    i += 1
-    number = 10 ** i
-
-    
-for n1 in range(1, number):
-    for n2 in range(1, number):
+for n1 in range(1, 1000):
+    for n2 in range(1, 1000):
         n = str(n1 * n2).split()[0]
         if n[:] == n[::-1]:
             palindrome.append(n1 * n2)
